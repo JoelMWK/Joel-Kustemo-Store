@@ -25,6 +25,7 @@ footer {
 .container {
   padding: 20px;
   width: 60%;
+  transition: all 0.6s ease-in-out;
 }
 .wrapper {
   display: grid;
@@ -59,6 +60,10 @@ img {
   align-items: center;
   gap: 50px;
 }
+.navbar a{
+    text-decoration: none;
+    color: #fff;
+}
 
 .logo {
   position: absolute;
@@ -92,6 +97,22 @@ li {
   width: 100%;
 }
 
+.dropdown-menu li a:hover{
+
+}
+
+.dropdown-menu li a{
+ 
+}
+
+.paddingTop{
+    padding-top: 220px;
+}
+
+.changeColor{
+    background-color: rgb(0, 114, 90);
+}
+
 .blur {
   -webkit-filter: blur(2px);
   filter: blur(2px);
@@ -109,11 +130,19 @@ li {
   border-radius: 2px;
   margin: 5px;
 }
-.icon div::before {
-  
+
+.rotateLeft{
+    -webkit-transform: rotate(-45deg) translate(-3px, 3px);
+    transform: rotate(-45deg) translate(-3px, 3px);
+    transition: all 0.4s ease-in-out;
 }
-.icon div::after {
-    
+.rotateRight{
+    -webkit-transform: rotate(45deg) translate(-4px, -4x);
+    transform: rotate(45deg) translate(-4px, -4px);
+    transition: all 0.4s ease-in-out;
+}
+.middleHide{
+display: none;
 }
 
 .center {
@@ -128,4 +157,13 @@ li {
   .icon {
     display: block;
   }
+}
+
+@keyframes linkHover{
+    0%{
+        text-decoration: underline solid black 4px;
+    }
+    100%{
+
+    }
 }
