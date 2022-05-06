@@ -22,7 +22,6 @@ function openMenu(){
   menuSelect.forEach((element) => {
     element.style.display = "flex";
   });
-  dropdown.classList.add("changeColor");
   container.classList.add("paddingTop");
   toggleNavbar = 1;
 }
@@ -31,7 +30,6 @@ function closeMenu(){
   menuSelect.forEach((element) => {
     element.style.display = "none";
   });
-  dropdown.classList.remove("changeColor");
   container.classList.remove("paddingTop");
   toggleNavbar = 0;
 }

@@ -1,8 +1,8 @@
+/*css classes*/
 * {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
-
 html,
 body {
   background-color: rgb(193, 193, 193);
@@ -11,9 +11,9 @@ body {
   user-select: none;
 }
 header {
-  width: 100;
+  width: 100%;
   height: 100px;
-  background-color: white;
+  background-color: rgb(0, 179, 140);
 }
 footer {
   position: absolute;
@@ -21,7 +21,18 @@ footer {
   height: 200px;
   background-color: white;
 }
+li {
+  list-style: none;
+  text-shadow: 2px 2px 2px black;
+  margin: 20px;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
+/*Custom css classes*/
 .container {
   padding: 20px;
   width: 60%;
@@ -29,19 +40,33 @@ footer {
 }
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 140px);
-  grid-template-rows: repeat(5, 220px);
-  justify-content: space-evenly;
+  justify-content: center;
+  grid-template-columns: auto;
+  grid-template-rows: 220px;
+  gap: 10px;
   padding-bottom: 200px;
 }
 
-img {
-  width: 100%;
-  height: 100%;
+.grid-area-2x2 {
+  grid-area: 3/3 / span 2 / 5;
 }
-
+.grid-area-2x1 {
+  grid-area: 1/3/1 / span 2;
+}
 .grid-area {
-  grid-area: 2/2/4/4;
+  grid-area: 1/1 / span 2 / span 2;
+}
+.grid-area-1 {
+  grid-area: 3/1 / span 1 / span 1;
+}
+.grid-area-2 {
+  grid-area: 3/2 / span 1 / span 1;
+}
+.grid-area-3 {
+  grid-area: 4/1 / span 1 / span 1;
+}
+.grid-area-4 {
+  grid-area: 4/2 / span 1 / span 1;
 }
 
 .wrap {
@@ -51,7 +76,6 @@ img {
 .navbar {
   display: flex;
   justify-content: flex-end;
-  background-color: rgb(0, 179, 140);
   color: #fff;
   height: 100%;
 }
@@ -60,9 +84,9 @@ img {
   align-items: center;
   gap: 50px;
 }
-.navbar a{
-    text-decoration: none;
-    color: #fff;
+.navbar a {
+  text-decoration: none;
+  color: #fff;
 }
 
 .logo {
@@ -76,11 +100,6 @@ img {
   border-radius: 6px;
   text-shadow: 3px 3px 2px rgb(14, 97, 120);
 }
-li {
-  list-style: none;
-  text-shadow: 2px 2px 2px black;
-  margin: 20px;
-}
 
 .dropdown-menu li {
   display: none;
@@ -91,31 +110,24 @@ li {
 .dropdown-menu {
   display: none;
   flex-direction: column;
-  background-color: rgb(0, 179, 140);
+  background-color: rgb(0, 114, 90);
   position: absolute;
   top: 84px;
   width: 100%;
 }
 
-.dropdown-menu li a:hover{
-
+.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 153, 120);
+  border-radius: 20px;
+  height: 50px;
+  width: 80px;
 }
 
-.dropdown-menu li a{
- 
-}
-
-.paddingTop{
-    padding-top: 220px;
-}
-
-.changeColor{
-    background-color: rgb(0, 114, 90);
-}
-
-.blur {
-  -webkit-filter: blur(2px);
-  filter: blur(2px);
+.paddingTop {
+  padding-top: 240px;
 }
 
 .icon {
@@ -131,18 +143,18 @@ li {
   margin: 5px;
 }
 
-.rotateLeft{
-    -webkit-transform: rotate(-45deg) translate(-3px, 3px);
-    transform: rotate(-45deg) translate(-3px, 3px);
-    transition: all 0.4s ease-in-out;
+.rotateLeft {
+  -webkit-transform: rotate(-45deg) translate(-3px, 3px);
+  transform: rotate(-45deg) translate(-3px, 3px);
+  transition: all 0.4s ease-in-out;
 }
-.rotateRight{
-    -webkit-transform: rotate(45deg) translate(-4px, -4x);
-    transform: rotate(45deg) translate(-4px, -4px);
-    transition: all 0.4s ease-in-out;
+.rotateRight {
+  -webkit-transform: rotate(45deg) translate(-4px, -4x);
+  transform: rotate(45deg) translate(-4px, -4px);
+  transition: all 0.4s ease-in-out;
 }
-.middleHide{
-display: none;
+.middleHide {
+  display: none;
 }
 
 .center {
@@ -157,13 +169,7 @@ display: none;
   .icon {
     display: block;
   }
-}
-
-@keyframes linkHover{
-    0%{
-        text-decoration: underline solid black 4px;
-    }
-    100%{
-
-    }
+  .container {
+    width: 80%;
+  }
 }
