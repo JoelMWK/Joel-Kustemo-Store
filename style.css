@@ -48,7 +48,6 @@ img {
   grid-template-rows: 220px;
   gap: 10px;
 }
-
 .wrap {
   flex-flow: row wrap;
 }
@@ -142,6 +141,30 @@ img {
   margin-top: 20px;
 }
 
+.items a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  padding: 5px;
+}
+.items a:hover::before {
+  animation-duration: 0.5s;
+  animation-name: underline;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.items a::before {
+  content: "";
+  position: absolute;
+  background-color: #80bce4;
+  width: 0%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 5px;
+}
+
 /*Custom css classes - index*/
 .preview-img img:hover {
   opacity: 0.5;
@@ -152,13 +175,11 @@ img {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 8px;
+  margin-bottom: 8px;
 }
 .preview img {
   height: 500px;
   width: 100%;
-}
-.preview-img img {
-  height: 160px;
 }
 
 .preview-img img,
@@ -213,5 +234,20 @@ img {
   }
   .container {
     width: 80%;
+  }
+}
+
+@keyframes underline {
+  25% {
+    width: 25%;
+  }
+  50% {
+    width: 50%;
+  }
+  75% {
+    width: 75%;
+  }
+  100% {
+    width: 100%;
   }
 }
