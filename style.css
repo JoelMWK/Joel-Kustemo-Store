@@ -5,7 +5,7 @@
 }
 html,
 body {
-  background-color: rgb(193, 193, 193);
+  background-color: #EFEFEF;
   margin: 0;
   height: 100%;
   user-select: none;
@@ -13,17 +13,20 @@ body {
 header {
   width: 100%;
   height: 100px;
-  background-color: rgb(0, 179, 140);
+  background-color: #205375;
   box-shadow: black 0 1px 10px;
 }
 footer {
-  position: absolute;
+  position: relative;
+  bottom: 0;
   width: 100%;
-  height: 200px;
-  background-color: white;
+  height: 240px;
+  background-color: #112B3C;
 }
 main {
   margin-bottom: 100px;
+  min-height: 100%;
+  transition: all 0.6s ease-in-out;
 }
 li {
   list-style: none;
@@ -37,10 +40,25 @@ img {
 }
 
 /*Custom css classes - All pages*/
+.footer{
+  display: grid;
+  color:white;
+  grid-template-columns: repeat(2, minmax(100px, 1fr));
+  justify-content: center;
+  text-align: center;
+  font-size: 15px;
+}
+.footer img{
+  width: 30px;
+  height: 30px;
+}
+.footer a{
+  text-decoration: none;
+  color: white;
+}
 .container {
   padding: 20px;
   width: 60%;
-  transition: all 0.6s ease-in-out;
 }
 .wrapper {
   display: grid;
@@ -80,12 +98,7 @@ img {
   position: absolute;
   left: 20px;
   font-size: 25px;
-  border-bottom: 6px solid rgb(14, 97, 120);
-  border-top: 6px solid rgb(14, 97, 120);
-  border-bottom-style: ridge;
-  border-top-style: ridge;
-  border-radius: 6px;
-  text-shadow: 3px 3px 2px rgb(14, 97, 120);
+  text-shadow: 2px 2px 2px #F66B0E;
 }
 
 .dropdown-menu li {
@@ -97,7 +110,7 @@ img {
 .dropdown-menu {
   display: none;
   flex-direction: column;
-  background-color: rgb(0, 114, 90);
+  background-color: #112B3C;
   position: absolute;
   top: 84px;
   width: 100%;
@@ -157,7 +170,7 @@ img {
 .items a::before {
   content: "";
   position: absolute;
-  background-color: #80bce4;
+  background-color: #F66B0E;
   width: 0%;
   height: 100%;
   z-index: -1;
@@ -177,7 +190,7 @@ img {
   margin-bottom: 8px;
 }
 .preview img {
-  height: 500px;
+  height: 600px;
   width: 100%;
 }
 
@@ -226,13 +239,14 @@ img {
 
 /*Custom css about*/
 .about {
+  margin-top: 60px;
   width: 50%;
   height: 400px;
   color: white;
   box-shadow: black 2px 2px 2px;
   text-align: center;
   border: 4px black double;
-  background-color: rgb(0, 179, 140);
+  background-color: #3076a4;
   text-shadow: black 1px 1px;
   overflow-y: scroll;
   padding: 20px;
@@ -248,6 +262,9 @@ img {
   }
   .container {
     width: 80%;
+  }
+  .preview img {
+    height: 500px;
   }
 }
 

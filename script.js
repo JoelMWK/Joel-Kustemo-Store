@@ -4,6 +4,7 @@ let menuSelect = document.querySelectorAll(".dropdown-menu, .dropdown-menu li");
 let dropdown = document.querySelector(".dropdown-menu");
 let container = document.querySelector(".container");
 let nthChild = document.querySelector(".icon").children;
+let main = document.querySelector("main");
 
 menu.addEventListener("click", toggleMenu);
 window.addEventListener("resize", resetNavbar);
@@ -20,7 +21,7 @@ function openMenu() {
   menuSelect.forEach((element) => {
     element.style.display = "flex";
   });
-  container.classList.add("paddingTop");
+  main.classList.add("paddingTop");
   toggleNavbar = 1;
 }
 
@@ -28,7 +29,7 @@ function closeMenu() {
   menuSelect.forEach((element) => {
     element.style.display = "none";
   });
-  container.classList.remove("paddingTop");
+  main.classList.remove("paddingTop");
   toggleNavbar = 0;
 }
 
