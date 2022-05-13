@@ -35,7 +35,7 @@ function closeMenu() {
 function hamburgerMenu() {
   nthChild[0].classList.toggle("rotateLeft");
   nthChild[1].classList.toggle("rotateRight");
-  nthChild[2].classList.toggle("middleHide");
+  nthChild[2].classList.toggle("hidden");
 }
 
 function resetNavbar() {
@@ -49,6 +49,12 @@ function changeImage(img) {
   let preview = document.querySelector(".preview img");
   let text = document.querySelector(".text-box");
   preview.src = img.src;
-  
   text.innerHTML = img.alt;
+}
+
+function aboutFunction(){
+  let about = document.querySelector(".about");
+
+  about.classList.toggle("hidden");
+  container.classList.toggle("hidden");
 }
